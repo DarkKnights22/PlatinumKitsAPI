@@ -14,6 +14,11 @@ public interface Kit {
     String getId();
 
     /**
+     * @return The amount the {@link Kit kit} will cost the {@link org.bukkit.entity.Player player} to unlock. 0 if none.
+     */
+    double getOneTimeCost();
+
+    /**
      * @return The name shown in the GUI when the {@link Kit kit} is available for the
      * {@link org.bukkit.entity.Player player}.
      */

@@ -13,13 +13,13 @@ public interface KitLevel {
      * @return The chance that the {@link org.bukkit.entity.Player player} has to upgrade to this
      * {@link KitLevel kitlevel}.
      */
-    int getChance();
+    double getChance();
 
     /**
      * @return The amount that the {@link org.bukkit.entity.Player player} has to pay to redeem this
      * {@link KitLevel kitlevel}.
      */
-    int getPrice();
+    double getPrice();
 
     /**
      * @return True if the player will be healed when redeeming this {@link KitLevel kitlevel}.
