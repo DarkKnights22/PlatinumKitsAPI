@@ -7,6 +7,8 @@ import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
+import javax.annotation.Nonnull;
+
 /**
  * @author DarkKnights22
  */
@@ -25,6 +27,10 @@ public class KitGiveEvent extends Event implements Cancellable {
         this.kitLevel = kitLevel;
     }
 
+    public static HandlerList getHandlerList() {
+        return handlers;
+    }
+
     /**
      * @return The player receiving the {@link Kit kit}.
      */
@@ -35,6 +41,7 @@ public class KitGiveEvent extends Event implements Cancellable {
     /**
      * @return The {@link Kit kit} the player will receive.
      */
+    @Nonnull
     public Kit getKit() {
         return kit;
     }
@@ -42,6 +49,7 @@ public class KitGiveEvent extends Event implements Cancellable {
     /**
      * @return The {@link KitLevel kitlevel} the player will receive.
      */
+    @Nonnull
     public KitLevel getKitLevel() {
         return kitLevel;
     }
@@ -58,10 +66,6 @@ public class KitGiveEvent extends Event implements Cancellable {
 
     @Override
     public HandlerList getHandlers() {
-        return handlers;
-    }
-
-    public static HandlerList getHandlerList() {
         return handlers;
     }
 
