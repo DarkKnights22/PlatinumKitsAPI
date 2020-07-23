@@ -1,5 +1,7 @@
 package me.darkknights22.platinumkits.api.kits;
 
+import org.bukkit.entity.Player;
+
 import java.util.List;
 import java.util.Map;
 
@@ -19,10 +21,10 @@ public interface Kit {
     double getOneTimeCost();
 
     /**
-     * @return The name shown in the GUI when the {@link Kit kit} is available for the
-     * {@link org.bukkit.entity.Player player}.
+     * @param player The {@link org.bukkit.entity.Player player} viewing the kit's available name.
+     * @return The available name for the kit, parsed with PlaceholderAPI placeholders.
      */
-    String getAvailableName();
+    String getAvailableName(Player player);
 
     /**
      * @return The material shown in the GUI when the {@link Kit kit} is available for the
@@ -36,16 +38,16 @@ public interface Kit {
     int getAvailableMaterialData();
 
     /**
-     * @return The lore shown in the GUI when the {@link Kit kit} is available for the
-     * {@link org.bukkit.entity.Player player}.
+     * @param player The {@link org.bukkit.entity.Player player} viewing the kit's available lore.
+     * @return The available lore for the kit, parsed with PlaceholderAPI placeholders.
      */
-    List<String> getAvailableLore();
+    List<String> getAvailableLore(Player player);
 
     /**
-     * @return The name shown in the GUI when the {@link Kit kit} is on cooldown for the
-     * {@link org.bukkit.entity.Player player}.
+     * @param player The {@link org.bukkit.entity.Player player} viewing the kit's on cooldown name.
+     * @return The on cooldown name for the kit, parsed with PlaceholderAPI placeholders.
      */
-    String getOnCooldownName();
+    String getOnCooldownName(Player player);
 
     /**
      * @return The material shown in the GUI when the {@link Kit kit} is on cooldown for the
@@ -59,16 +61,16 @@ public interface Kit {
     int getOnCooldownMaterialData();
 
     /**
-     * @return The lore shown in the GUI when the {@link Kit kit} is on cooldown for the
-     * {@link org.bukkit.entity.Player player}.
+     * @param player The {@link org.bukkit.entity.Player player} viewing the kit's on cooldown lore.
+     * @return The on cooldown lore for the kit, parsed with PlaceholderAPI placeholders.
      */
-    List<String> getOnCooldownLore();
+    List<String> getOnCooldownLore(Player player);
 
     /**
-     * @return The name shown in the GUI when the {@link org.bukkit.entity.Player player} does not have permission to
-     * redeem the {@link Kit kit}.
+     * @param player The {@link org.bukkit.entity.Player player} viewing the kit's no permission name.
+     * @return The no permission name for the kit, parsed with PlaceholderAPI placeholders.
      */
-    String getNoPermissionName();
+    String getNoPermissionName(Player player);
 
     /**
      * @return The material shown in the GUI when the {@link org.bukkit.entity.Player player} does not have permission
@@ -82,10 +84,10 @@ public interface Kit {
     int getNoPermissionMaterialData();
 
     /**
-     * @return The lore shown in the GUI when the {@link org.bukkit.entity.Player player} does not have permission to
-     * redeem the {@link Kit kit}.
+     * @param player The {@link org.bukkit.entity.Player player} viewing the kit's no permission lore.
+     * @return The no permission lore for the kit, parsed with PlaceholderAPI placeholders.
      */
-    List<String> getNoPermissionLore();
+    List<String> getNoPermissionLore(Player player);
 
     /**
      * @return The time (in seconds) that the {@link org.bukkit.entity.Player player} has to wait before redeeming the
