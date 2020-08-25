@@ -19,10 +19,30 @@ public interface KitsManager {
     void giveKit(Player player, String kitId);
 
     /**
+     * @param player          The player to give the {@link Kit kit} to.
+     * @param kitId           The {@link Kit#getId() id} of the {@link Kit kit} to give the {@link Player player}.
+     * @param permissionCheck Whether or not a permission check should take place to ensure the player has the permission for the {@link Kit kit}.
+     * @param cooldownCheck   Whether or not a cooldown check should take place to ensure the player is not on cooldown for the {@link Kit kit}.
+     * @param putOnCooldown   Whether or not the player should be placed on cooldown for the {@link Kit kit}.
+     * @param checkUpgrade    Whether or not the chance for the player to upgrade the {@link Kit kit} should be checked.
+     */
+    void giveKit(Player player, String kitId, boolean permissionCheck, boolean cooldownCheck, boolean putOnCooldown, boolean checkUpgrade);
+
+    /**
      * @param player The player to give the {@link Kit kit} to.
      * @param kit    The {@link Kit kit} to give the {@link Player player}.
      */
     void giveKit(Player player, Kit kit);
+
+    /**
+     * @param player          The player to give the {@link Kit kit} to.
+     * @param kit             The {@link Kit kit} to give the {@link Player player}.
+     * @param permissionCheck Whether or not a permission check should take place to ensure the player has the permission for the {@link Kit kit}.
+     * @param cooldownCheck   Whether or not a cooldown check should take place to ensure the player is not on cooldown for the {@link Kit kit}.
+     * @param putOnCooldown   Whether or not the player should be placed on cooldown for the {@link Kit kit}.
+     * @param checkUpgrade    Whether or not the chance for the player to upgrade the {@link Kit kit} should be checked.
+     */
+    void giveKit(Player player, Kit kit, boolean permissionCheck, boolean cooldownCheck, boolean putOnCooldown, boolean checkUpgrade);
 
     /**
      * @param kitId The {@link Kit#getId() id} of the {@link Kit kit}.
