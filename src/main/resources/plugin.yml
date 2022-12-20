@@ -1,9 +1,0 @@
-name: Bedwars
-version: 1.0.0
-main: me.darkknights22.bedwars.Bedwars
-depend:
-  - MassiveCore
-  - FastAsyncWorldEdit
-  - HolographicExtension
-  - ProtocolLib
-authors: [DarkKnights22]

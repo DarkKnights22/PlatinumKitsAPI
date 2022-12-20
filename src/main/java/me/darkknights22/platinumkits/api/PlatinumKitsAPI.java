@@ -10,7 +10,7 @@ public class PlatinumKitsAPI {
     private static KitsManager kitsManager;
 
     /**
-     * @return The {@link KitsManager kitsmanager} object.
+     * @return The {@link KitsManager} object.
      */
     public static KitsManager getKitsManager() {
         return kitsManager;
